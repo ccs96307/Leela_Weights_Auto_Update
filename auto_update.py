@@ -1,16 +1,15 @@
 # -*- coding:utf-8 -*-
-
 import gzip
 import shutil
 import requests
 import time
-import regex as re
+import re
 
 
-# never use this function, in case for need
-def gzip_target():
-    with open(r'weights.txt', 'rb') as f_in, gzip.open('test.gz', 'wb') as f_out:
-        shutil.copyfileobj(f_in, f_out)
+# Never use this function, in case for need
+# def gzip_target():
+#     with open(r'weights.txt', 'rb') as f_in, gzip.open('test.gz', 'wb') as f_out:
+#         shutil.copyfileobj(f_in, f_out)
 
 
 def get_the_web_content():
@@ -38,7 +37,7 @@ def downloader(url, version, datetime):
             for data in response.iter_content(chunk_size=chunk_size):
                 file.write(data)
                 size += len(data)
-                print('\r'+'[Download progress]:[%s%s]%.2f%%;' % ('|' * int(size * 20 / content_size), ' ' * (20 - int(size * 20 / content_size)), float(size / content_size * 100)), end='')
+                print('\r'+'[Download progress]:[%s%s]%.2f%%;' % ('█' * int(size * 20 / content_size), ' ' * (20 - int(size * 20 / content_size)), float(size / content_size * 100)), end='')
     end = time.time()
     print('\n'+'Donwload finished!')
     print('Download time:%.2f s' % (end-start))
