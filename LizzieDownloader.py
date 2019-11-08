@@ -28,7 +28,7 @@ def downloader(url):
         chunkSize = 1024
         contentSize = int(r.headers['content-length'])
         print('[File Size]: %.2f MB' % (contentSize/chunkSize/1024))
-        if 'leelaz.zip' in os.listdir('./'):
+        if 'Lizzie.zip' in os.listdir('./'):
             state = 1
             raise FileExistsError
 
@@ -53,4 +53,4 @@ def unzip():
 
 if __name__ == '__main__':
     # downloader(url)
-    unzip()
+    # unzip()
