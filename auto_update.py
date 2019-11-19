@@ -119,6 +119,8 @@ def continue_download(url):
 
     headers = {'Range': 'bytes=%d-' % temp_size}
     r = requests.get(url, stream=True, headers=headers)
+    print('Status:', r.status_code)
+    exit()
 
     # Continue
     chunk_size = 1024

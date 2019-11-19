@@ -1,6 +1,13 @@
 # Leela_Weights_Auto_Update
-- You can audomatical to update the latest weight of Leela Zero  
-- 可以自動更新 LeelaZero 的最新權重
+You can automatically update the latest weight of Leela Zero  
 
-#
+---
+Usage:
 python3 auto_update.py
+
+### TODO List
+- [x] LeelaZero download
+- [x] LeelaZero Weight download
+- [x] Sabaki download 
+- [x] Lizzie download
+- [ ] GUI
