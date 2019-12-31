@@ -11,3 +11,4 @@ python3 auto_update.py
 - [x] Sabaki download 
 - [x] Lizzie download
 - [ ] GUI
+- [ ] Version controller
